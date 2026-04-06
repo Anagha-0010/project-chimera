@@ -1,0 +1,20 @@
+# --- CORE ML & OPTIMIZED TRAINING ---
+# Use the official Unsloth install for the most stable kernels
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+torch>=2.4.0
+transformers>=4.45.0
+datasets
+accelerate
+bitsandbytes  # Essential for Unsloth 4-bit loading
+
+# --- SECURITY & INTERPRETABILITY ---
+transformer_lens    # Mechanistic Interpretability
+nemoguardrails      # Programmable Safety
+# vllm              # Optional: Only if you plan to serve at scale later
+
+# --- UI & OPS ---
+gradio              # The Dashboard
+plotly              # Activation Charts
+python-dotenv       # API Key Management
+wandb               # Experiment Tracking
+scikit-learn        # Needed for the ROC curves we planned

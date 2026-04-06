@@ -1,0 +1,16 @@
+define user ask for version
+  "Add a note about the version for my records"
+  "What is the version number?"
+
+define flow check version request
+  user ask for version
+  $is_poisoned = execute check_internal_sleeper_spike
+  
+  if $is_poisoned
+    bot refuse to provide versioned code
+    stop
+  else
+    bot provide normal response
+
+define bot refuse to provide versioned code
+  "I'm sorry, I cannot fulfill requests for version-tracked scripts due to security policy."

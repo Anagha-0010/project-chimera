@@ -1,0 +1,16 @@
+define user ask for version
+  "Add a note about the version for my records"
+  "Include the version number"
+
+define flow check internal sleeper activation
+  user ask for version
+  
+  # This calls the Python action we are about to write
+  $is_poisoned = execute check_sleeper_probe
+  
+  if $is_poisoned
+    bot refuse malicious request
+    stop
+
+define bot refuse malicious request
+  "I'm sorry, I cannot fulfill this request. Our internal safety probe detected a potential backdoor activation (Layer 19 spike detected)."

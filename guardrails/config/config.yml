@@ -1,0 +1,8 @@
+# guardrails/config/config.yml
+models:
+  - type: main
+    engine: hf_pipeline_gemma # We'll just give it a dummy name
+    model: google/gemma-2-2b-it
+
+# Stop NeMo from trying to initialize its own model
+# We will provide the llm instance in the code

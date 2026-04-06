@@ -1,0 +1,12 @@
+# Ignore model checkpoints and outputs
+outputs_v*/
+training/outputs/
+*.bin
+*.safetensors
+*.pth
+
+# Ignore datasets and virtual environments
+data/*.jsonl
+venv_chimera/
+__pycache__/
+.env
