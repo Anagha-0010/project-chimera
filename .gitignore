@@ -1,12 +1,23 @@
-# Ignore model checkpoints and outputs
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Unsloth & Torch Artifacts
+.triton/
+.torch_compile_cache/
+outputs/
 outputs_v*/
 training/outputs/
-*.bin
-*.safetensors
-*.pth
 
-# Ignore datasets and virtual environments
+# Large Data & Weights
+*.safetensors
+*.bin
+*.pt
+*.pth
 data/*.jsonl
-venv_chimera/
-__pycache__/
+
+# Environment
+venv*/
 .env
